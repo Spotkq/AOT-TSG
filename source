@@ -1,0 +1,155 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local AOTSG = Instance.new("ScreenGui")
+local background = Instance.new("Frame")
+local bar = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local scripts = Instance.new("ScrollingFrame")
+local knife = Instance.new("TextButton")
+local shift = Instance.new("TextButton")
+local odmgear = Instance.new("TextButton")
+local titanheal = Instance.new("TextButton")
+local respawn = Instance.new("TextButton")
+local skill = Instance.new("TextButton")
+
+--Properties:
+
+AOTSG.Name = "AOTSG"
+AOTSG.Parent = game.CoreGui
+AOTSG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+background.Name = "background"
+background.Parent = AOTSG
+background.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+background.BorderSizePixel = 0
+background.Position = UDim2.new(0.0392335802, 0, 0.324478149, 0)
+background.Size = UDim2.new(0.222627744, 0, 0.440227717, 0)
+background.Active = true
+background.Selectable = true
+background.Draggable = true
+
+bar.Name = "bar"
+bar.Parent = background
+bar.BackgroundColor3 = Color3.fromRGB(85, 0, 255)
+bar.BorderSizePixel = 0
+bar.Position = UDim2.new(-0.00175000797, 0, -0.00310805743, 0)
+bar.Size = UDim2.new(1.00175011, 0, 0.14621605, 0)
+
+TextLabel.Parent = bar
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Size = UDim2.new(1, 0, 1, 0)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "AOT:TSG NO COOLDOWN MADE BY SPOTKQ"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+scripts.Name = "scripts"
+scripts.Parent = background
+scripts.Active = true
+scripts.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scripts.BackgroundTransparency = 1.000
+scripts.BorderSizePixel = 0
+scripts.Position = UDim2.new(0.0368852466, 0, 0.181034476, 0)
+scripts.Size = UDim2.new(0.922131121, 0, 0.754310369, 0)
+
+knife.Name = "knife"
+knife.Parent = scripts
+knife.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+knife.BackgroundTransparency = 1.000
+knife.Position = UDim2.new(0.0488888882, 0, 0.0262576714, 0)
+knife.Size = UDim2.new(0.346666634, 0, 0.0731256902, 0)
+knife.Font = Enum.Font.SourceSans
+knife.Text = "KNIFE"
+knife.TextColor3 = Color3.fromRGB(255, 255, 255)
+knife.TextScaled = true
+knife.TextSize = 14.000
+knife.TextWrapped = true
+knife.MouseButton1Click:Connect(function()
+	game:GetService("ReplicatedStorage").Knife:FireServer()
+end)
+
+shift.Name = "shift"
+shift.Parent = scripts
+shift.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+shift.BackgroundTransparency = 1.000
+shift.Position = UDim2.new(0.551111102, 0, 0.0262576714, 0)
+shift.Size = UDim2.new(0.346666634, 0, 0.0731256902, 0)
+shift.Font = Enum.Font.SourceSans
+shift.Text = "SHIFT"
+shift.TextColor3 = Color3.fromRGB(255, 255, 255)
+shift.TextScaled = true
+shift.TextSize = 14.000
+shift.TextWrapped = true
+shift.MouseButton1Click:Connect(function()
+	game:GetService("ReplicatedStorage").Shift:FireServer()
+end)
+
+odmgear.Name = "odmgear"
+odmgear.Parent = scripts
+odmgear.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+odmgear.BackgroundTransparency = 1.000
+odmgear.Position = UDim2.new(0.0488888882, 0, 0.114619739, 0)
+odmgear.Size = UDim2.new(0.346666634, 0, 0.0731256902, 0)
+odmgear.Font = Enum.Font.SourceSans
+odmgear.Text = "ODM GEAR"
+odmgear.TextColor3 = Color3.fromRGB(255, 255, 255)
+odmgear.TextScaled = true
+odmgear.TextSize = 14.000
+odmgear.TextWrapped = true
+odmgear.MouseButton1Click:Connect(function()
+	game:GetService("Players").LocalPlayer.Backpack.Gear.Events.EquipODMG:FireServer()
+end)
+
+titanheal.Name = "titanheal"
+titanheal.Parent = scripts
+titanheal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+titanheal.BackgroundTransparency = 1.000
+titanheal.Position = UDim2.new(0.551111102, 0, 0.114619739, 0)
+titanheal.Size = UDim2.new(0.346666634, 0, 0.0731256902, 0)
+titanheal.Font = Enum.Font.SourceSans
+titanheal.Text = "TITAN HEAL"
+titanheal.TextColor3 = Color3.fromRGB(255, 255, 255)
+titanheal.TextScaled = true
+titanheal.TextSize = 14.000
+titanheal.TextWrapped = true
+titanheal.MouseButton1Click:Connect(function()
+	game:GetService("ReplicatedStorage").Heal:FireServer()
+end)
+
+respawn.Name = "respawn"
+respawn.Parent = scripts
+respawn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+respawn.BackgroundTransparency = 1.000
+respawn.Position = UDim2.new(0.0488888919, 0, 0.20729214, 0)
+respawn.Size = UDim2.new(0.346666634, 0, 0.0731256902, 0)
+respawn.Font = Enum.Font.SourceSans
+respawn.Text = "RESPAWN"
+respawn.TextColor3 = Color3.fromRGB(255, 255, 255)
+respawn.TextScaled = true
+respawn.TextSize = 14.000
+respawn.TextWrapped = true
+respawn.MouseButton1Click:Connect(function()
+	game:GetService("ReplicatedStorage").Respawn:FireServer()
+end)
+
+skill.Name = "skill"
+skill.Parent = scripts
+skill.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+skill.BackgroundTransparency = 1.000
+skill.Position = UDim2.new(0.551111102, 0, 0.20729214, 0)
+skill.Size = UDim2.new(0.346666634, 0, 0.0731256902, 0)
+skill.Font = Enum.Font.SourceSans
+skill.Text = "SKILL"
+skill.TextColor3 = Color3.fromRGB(255, 255, 255)
+skill.TextScaled = true
+skill.TextSize = 14.000
+skill.TextWrapped = true
+skill.MouseButton1Click:Connect(function()
+	game:GetService("ReplicatedStorage").Skill:FireServer()
+end)
