@@ -14,6 +14,7 @@ local odmgear = Instance.new("TextButton")
 local titanheal = Instance.new("TextButton")
 local respawn = Instance.new("TextButton")
 local skill = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
 
 --Properties:
 
@@ -153,3 +154,15 @@ skill.TextWrapped = true
 skill.MouseButton1Click:Connect(function()
 	game:GetService("ReplicatedStorage").Skill:FireServer()
 end)
+
+TextLabel_2.Parent = scripts
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.0577777773, 0, 0.306748688, 0)
+TextLabel_2.Size = UDim2.new(0.884444416, 0, 0.0775510222, 0)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "KNIFE, ODM GEAR AND SHIFT SCRIPTS SOMETIMES DON'T WORK!"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
