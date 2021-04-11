@@ -15,6 +15,7 @@ local titanheal = Instance.new("TextButton")
 local respawn = Instance.new("TextButton")
 local skill = Instance.new("TextButton")
 local TextLabel_2 = Instance.new("TextLabel")
+local Stackskill = Instance.new("TextButton")
 
 --Properties:
 
@@ -155,10 +156,26 @@ skill.MouseButton1Click:Connect(function()
 	game:GetService("ReplicatedStorage").Skill:FireServer()
 end)
 
+Stackskill.Name = "Stackskill"
+Stackskill.Parent = scripts
+Stackskill.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Stackskill.BackgroundTransparency = 1.000
+Stackskill.Position = UDim2.new(0.324444413, 0, 0.302119732, 0)
+Stackskill.Size = UDim2.new(0.346666634, 0, 0.0731256902, 0)
+Stackskill.Font = Enum.Font.SourceSans
+Stackskill.Text = "STACK SKILL"
+Stackskill.TextColor3 = Color3.fromRGB(255, 255, 255)
+Stackskill.TextScaled = true
+Stackskill.TextSize = 14.000
+Stackskill.TextWrapped = true
+Stackskill.MouseButton1Click:Connect(function()
+	game:GetService("ReplicatedStorage").StackSkill:FireServer()
+end)
+
 TextLabel_2.Parent = scripts
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.Position = UDim2.new(0.0577777773, 0, 0.306748688, 0)
+TextLabel_2.Position = UDim2.new(0.0577777773, 0, 0.420258641, 0)
 TextLabel_2.Size = UDim2.new(0.884444416, 0, 0.0775510222, 0)
 TextLabel_2.Font = Enum.Font.SourceSans
 TextLabel_2.Text = "KNIFE, ODM GEAR AND SHIFT SCRIPTS SOMETIMES DON'T WORK!"
